@@ -1,4 +1,4 @@
-#N canvas 1912 76 1920 997 12;
+#N canvas 435 299 1920 997 12;
 #X obj 411 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X floatatom 467 217 5 0 0 0 - - -;
@@ -679,7 +679,7 @@ either 1 or 2 sixteenth notes, f 30;
 #X obj 813 693 r sixteenth_note;
 #X obj 1415 716 r quarter_note;
 #X obj 1815 1112 r quarter_note;
-#X text 589 152 TEMPO SEQUENCING;
+#X text 225 126 TEMPO SEQUENCING;
 #X msg 1836 1505 0.08;
 #X obj 1790 1560 *~ 0.08;
 #X obj 828 365 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -881,8 +881,8 @@ heart beat intervals, f 73;
 #X obj 1908 175 r s_led4;
 #X obj 524 172 sel 63;
 #X obj 411 82 metro 100;
-#X obj 577 173 delay 100;
-#X obj 577 200 rhythm;
+#X obj 638 172 delay 100;
+#X obj 638 199 rhythm;
 #X obj 2078 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 2078 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -924,6 +924,15 @@ heart beat intervals, f 73;
 #X msg 1982 268 symbol SNARE!;
 #X msg 2078 221 symbol TOM!;
 #X msg 2176 268 symbol HAT!;
+#X obj 582 172 switch;
+#X obj 600 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 518 82 sel 0;
+#X obj 518 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 518 134 s stop;
+#X obj 691 199 r stop;
+#X msg 467 144 0;
 #X connect 0 0 365 0;
 #X connect 1 0 222 0;
 #X connect 1 0 227 0;
@@ -1151,6 +1160,7 @@ heart beat intervals, f 73;
 #X connect 239 0 236 0;
 #X connect 240 0 395 1;
 #X connect 240 0 395 0;
+#X connect 240 0 396 1;
 #X connect 241 0 331 0;
 #X connect 242 0 243 0;
 #X connect 243 0 245 0;
@@ -1298,6 +1308,7 @@ heart beat intervals, f 73;
 #X connect 362 0 256 0;
 #X connect 362 1 361 0;
 #X connect 365 0 395 0;
+#X connect 365 0 429 0;
 #X connect 366 0 141 0;
 #X connect 367 0 142 0;
 #X connect 368 0 371 0;
@@ -1319,7 +1330,7 @@ heart beat intervals, f 73;
 #X connect 391 0 387 0;
 #X connect 392 0 388 0;
 #X connect 393 0 389 0;
-#X connect 394 0 396 0;
+#X connect 394 0 427 1;
 #X connect 395 0 203 0;
 #X connect 396 0 397 0;
 #X connect 406 0 398 0;
@@ -1342,3 +1353,11 @@ heart beat intervals, f 73;
 #X connect 424 0 422 0;
 #X connect 425 0 422 0;
 #X connect 426 0 422 0;
+#X connect 427 0 396 0;
+#X connect 427 0 428 0;
+#X connect 429 0 430 0;
+#X connect 430 0 431 0;
+#X connect 430 0 433 0;
+#X connect 430 0 427 0;
+#X connect 432 0 397 0;
+#X connect 433 0 205 0;

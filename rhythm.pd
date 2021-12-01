@@ -30,7 +30,7 @@
 #X obj 1051 534 s score_incr;
 #X obj 808 350 r key_press;
 #X obj 592 208 metro 200;
-#X obj 592 183 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 592 183 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 627 184 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -41,7 +41,7 @@
 #X obj 1022 211 r press_window;
 #X obj 676 156 r led_window;
 #X obj 679 184 hsl 64 15 100 600 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3780 1;
+-1 -1 1260 1;
 #X obj 629 264 % 5;
 #X obj 544 323 sel 2;
 #X obj 544 354 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -61,11 +61,11 @@
 1;
 #X obj 630 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 673 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 673 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 500 353 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 500 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 500 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 693 385 delay 200;
 #X obj 693 414 s check_kick;
@@ -82,7 +82,7 @@
 #X obj 1158 323 sel 1;
 #X floatatom 1320 264 5 0 0 0 - - -;
 #X obj 1337 184 hsl 64 15 100 600 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 3780 1;
+-262144 -1 -1 1260 1;
 #X obj 1287 264 % 5;
 #X obj 1202 323 sel 2;
 #X obj 1202 354 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -207,7 +207,7 @@ presses increase the score.;
 #X obj 500 794 sel 1;
 #X floatatom 662 735 5 0 0 0 - - -;
 #X obj 679 655 hsl 64 15 100 600 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3780 1;
+-1 -1 1260 1;
 #X obj 629 735 % 5;
 #X obj 544 794 sel 2;
 #X obj 544 825 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -282,7 +282,7 @@ presses increase the score.;
 #X obj 1158 778 sel 1;
 #X floatatom 1320 719 5 0 0 0 - - -;
 #X obj 1337 639 hsl 64 15 100 600 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 3780 1;
+-262144 -1 -1 1260 1;
 #X obj 1287 719 % 5;
 #X obj 1202 778 sel 2;
 #X obj 1202 809 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -313,7 +313,7 @@ presses increase the score.;
 #X obj 1572 611 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1630 611 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X msg 1630 666 1;
 #X obj 1630 722 +;
 #X obj 1685 722 % 16;
@@ -324,7 +324,7 @@ presses increase the score.;
 #X obj 1630 636 metro 50;
 #X obj 1630 805 spigot;
 #X obj 1572 752 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 1688 692 hsl 64 15 4 16 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 6300 1;
 #X floatatom 1630 838 5 0 0 0 - - -;
@@ -337,7 +337,7 @@ presses increase the score.;
 #X obj 1557 889 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1588 890 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 1557 936 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 1556 865 1;
@@ -362,7 +362,7 @@ presses increase the score.;
 #X obj 2330 433 s score_decr;
 #X obj 2541 380 spigot;
 #X obj 2541 301 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 2578 301 delay 800;
 #X obj 2638 247 r press_window;
 #X obj 2638 274 * 50;
@@ -370,7 +370,7 @@ presses increase the score.;
 -1 -1;
 #X obj 2541 326 expr ($f1 - 1) * -1;
 #X obj 2541 355 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+-0 1;
 #X obj 2618 355 loadbang;
 #X obj 2541 433 s score_decr;
 #X obj 972 860 sel 115;
@@ -433,27 +433,27 @@ tom responds to key s \, and hat responds to key d;
 #X obj 1315 692 loadbang;
 #X obj 93 79 r sixty_fourth_note_duration;
 #X floatatom 143 160 5 0 0 0 - - -;
-#X obj 143 203 / 8;
 #X obj 143 228 s led_window;
 #X obj 196 161 hsl 64 15 4 16 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2100 1;
-#X msg 193 131 8;
+-1 -1 6300 1;
 #X obj 193 107 loadbang;
-#X floatatom 199 192 5 0 0 0 - - -;
-#X msg 41 82 100;
+#X floatatom 211 197 5 0 0 0 - - -;
 #X obj 42 228 metro 1600;
 #X obj 42 268 s loop;
 #X obj 42 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 42 206 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 42 206 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 42 147 inlet;
 #X obj 592 155 r loop;
 #X obj 692 572 r led_window;
-#X obj 652 594 * 2;
-#X obj 1304 130 * 4;
-#X obj 1304 582 * 6;
 #X obj 93 159 * 64;
+#X obj 143 203 / 16;
+#X msg 41 82 50;
+#X obj 652 594 * 4;
+#X obj 1304 130 * 8;
+#X obj 1303 582 * 12;
+#X msg 193 131 16;
 #X connect 0 0 2 0;
 #X connect 0 0 14 0;
 #X connect 0 0 95 0;
@@ -837,24 +837,24 @@ tom responds to key s \, and hat responds to key d;
 #X connect 323 0 58 0;
 #X connect 324 0 151 0;
 #X connect 325 0 205 0;
-#X connect 326 0 345 0;
-#X connect 328 0 329 0;
-#X connect 328 0 333 0;
-#X connect 330 0 328 1;
-#X connect 331 0 330 0;
-#X connect 332 0 331 0;
-#X connect 334 0 345 0;
-#X connect 335 0 336 0;
-#X connect 337 0 338 0;
-#X connect 338 0 335 0;
-#X connect 339 0 337 0;
-#X connect 340 0 25 0;
-#X connect 340 0 26 0;
-#X connect 341 0 155 0;
-#X connect 341 0 342 0;
+#X connect 326 0 339 0;
+#X connect 329 0 340 1;
+#X connect 330 0 345 0;
+#X connect 332 0 333 0;
+#X connect 334 0 335 0;
+#X connect 335 0 332 0;
+#X connect 336 0 334 0;
+#X connect 337 0 25 0;
+#X connect 337 0 26 0;
+#X connect 338 0 155 0;
+#X connect 338 0 342 0;
+#X connect 339 0 327 0;
+#X connect 339 0 332 1;
+#X connect 339 0 340 0;
+#X connect 340 0 328 0;
+#X connect 340 0 331 0;
+#X connect 341 0 339 0;
 #X connect 342 0 199 1;
 #X connect 343 0 6 1;
 #X connect 344 0 252 1;
-#X connect 345 0 327 0;
-#X connect 345 0 328 0;
-#X connect 345 0 335 1;
+#X connect 345 0 329 0;

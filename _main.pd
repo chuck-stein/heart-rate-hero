@@ -485,7 +485,7 @@ f 25;
 -0.0609571 -0.0590522 -0.0571474 -0.0544263 -0.0517051 -0.048984 -0.0462628
 -0.0435417 -0.0408205 -0.0380994 -0.0353782 -0.0326571 -0.0299359 -0.0272148
 -0.0244936 -0.0217725 -0.0190513 -0.0163302 -0.013609 -0.0108879 -0.00816673
--0.00544558 -0.00272443 -3.30942e-06 0.00223764 0.00447859 0.00671953
+-0.00544558 -0.00272443 -3.30942e-006 0.00223764 0.00447859 0.00671953
 0.00896048 0.0112014 0.0134424 0.0156833 0.0179243 0.0201652 0.0224062
 0.0246471 0.0268881 0.029129 0.03137 0.0336109 0.0358519 0.0380928
 0.0403338 0.0425747 0.0448157 0.0470566 0.0492975 0.0515385 0.0537794
@@ -500,7 +500,7 @@ f 25;
 0.310004 0.308576 0.307147 0.305719 0.30429 0.302861 0.301433 0.185716
 0.182859 0.180001 0.177144 0.174287 0.17143 0.168573 0.165715 0.162858
 0.160001 0.0714276 0.0671418 0.062856 0.0585701 0.0542843 0.0499985
-0.0457127 0.0414269 0.0371411 0.0328553 -2.61816e-06 -0.00519754 -0.0103925
+0.0457127 0.0414269 0.0371411 0.0328553 -2.61816e-006 -0.00519754 -0.0103925
 -0.0155874 -0.0207823 -0.0259772 -0.0311722 -0.0363671 -0.041562 -0.0467569
 -0.0519519 -0.128577 -0.131434 -0.134291 -0.137149 -0.140006 -0.142863
 -0.14572 -0.148577 -0.151435 -0.154292 -0.185721 -0.192864 -0.200007
@@ -923,7 +923,7 @@ heart beat intervals, f 73;
 #X obj 518 134 s stop;
 #X obj 691 199 r stop;
 #X msg 467 144 0;
-#N canvas 0 38 1512 857 pin_control 0;
+#N canvas -11 -11 2560 1316 pin_control 1;
 #X obj 557 64 loadbang;
 #X msg 310 126 out 15;
 #X msg 368 126 out 16;
@@ -934,79 +934,79 @@ heart beat intervals, f 73;
 #X msg 674 125 out 21;
 #X msg 732 126 out 22;
 #X obj 547 229 s bela_setDigital;
-#X obj 326 483 dac~ 3 4 5 6;
-#X obj 662 387 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 231 576 dac~ 3 4 5 6;
+#X obj 730 619 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 662 358 sel 1;
-#X obj 810 375 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 730 530 sel 1;
+#X obj 928 616 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 810 348 sel 1;
-#X obj 956 386 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 928 530 sel 1;
+#X obj 1114 618 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 956 359 sel 1;
-#X obj 1104 374 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1114 531 sel 1;
+#X obj 1327 616 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1104 347 sel 1;
-#X obj 259 774 r bela_digitalOut15;
-#X floatatom 291 836 5 0 0 0 - - -;
-#X floatatom 442 838 5 0 0 0 - - -;
-#X floatatom 601 837 5 0 0 0 - - -;
-#X floatatom 752 839 5 0 0 0 - - -;
-#X obj 410 775 r bela_digitalOut16;
-#X obj 569 775 r bela_digitalOut17;
-#X obj 720 777 r bela_digitalOut18;
-#X floatatom 662 426 5 0 0 0 - - -;
-#X floatatom 810 423 5 0 0 0 - - -;
-#X floatatom 956 423 5 0 0 0 - - -;
-#X floatatom 1104 420 5 0 0 0 - - -;
-#X msg 600 404 119;
-#X obj 566 343 loadbang;
-#X obj 579 382 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1327 530 sel 1;
+#X obj 299 994 r bela_digitalOut15;
+#X floatatom 331 1056 5 0 0 0 - - -;
+#X floatatom 482 1058 5 0 0 0 - - -;
+#X floatatom 641 1057 5 0 0 0 - - -;
+#X floatatom 792 1059 5 0 0 0 - - -;
+#X obj 450 995 r bela_digitalOut16;
+#X obj 609 995 r bela_digitalOut17;
+#X obj 760 997 r bela_digitalOut18;
+#X floatatom 730 658 5 0 0 0 - - -;
+#X floatatom 928 655 5 0 0 0 - - -;
+#X floatatom 1114 655 5 0 0 0 - - -;
+#X floatatom 1327 652 5 0 0 0 - - -;
+#X msg 668 636 119;
+#X obj 642 501 loadbang;
+#X obj 642 536 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 758 398 101;
-#X msg 903 402 115;
-#X msg 1059 401 100;
-#X obj 840 498 s key_press;
-#X floatatom 302 937 5 0 0 0 - - -;
-#X floatatom 453 939 5 0 0 0 - - -;
-#X floatatom 612 938 5 0 0 0 - - -;
-#X floatatom 763 940 5 0 0 0 - - -;
-#X floatatom 901 839 5 0 0 0 - - -;
-#X floatatom 1052 841 5 0 0 0 - - -;
-#X floatatom 1211 840 5 0 0 0 - - -;
-#X floatatom 1362 842 5 0 0 0 - - -;
-#X obj 405 580 r led_list_dig;
-#X obj 263 393 r led_list_ana;
-#X floatatom 269 519 5 0 0 0 - - -;
-#X floatatom 319 518 5 0 0 0 - - -;
-#X floatatom 366 521 5 0 0 0 - - -;
-#X floatatom 416 520 5 0 0 0 - - -;
-#X obj 405 638 unpack float float float float float float float float
+#X msg 876 630 101;
+#X msg 1061 634 115;
+#X msg 1282 633 100;
+#X obj 908 730 s key_press;
+#X floatatom 342 1157 5 0 0 0 - - -;
+#X floatatom 493 1159 5 0 0 0 - - -;
+#X floatatom 652 1158 5 0 0 0 - - -;
+#X floatatom 803 1160 5 0 0 0 - - -;
+#X floatatom 941 1059 5 0 0 0 - - -;
+#X floatatom 1092 1061 5 0 0 0 - - -;
+#X floatatom 1251 1060 5 0 0 0 - - -;
+#X floatatom 1402 1062 5 0 0 0 - - -;
+#X obj 445 800 r led_list_dig;
+#X obj 168 486 r led_list_ana;
+#X floatatom 174 612 5 0 0 0 - - -;
+#X floatatom 224 611 5 0 0 0 - - -;
+#X floatatom 271 614 5 0 0 0 - - -;
+#X floatatom 321 613 5 0 0 0 - - -;
+#X obj 445 858 unpack float float float float float float float float
 float float float float;
-#X obj 265 440 unpack float float float float;
-#X obj 270 875 r bela_digitalOut11;
-#X obj 419 876 r bela_digitalOut12;
-#X obj 580 879 r bela_digitalOut13;
-#X obj 731 876 r bela_digitalOut14;
-#X obj -4 714 s bela_digitalOut11;
-#X obj 144 712 s bela_digitalOut12;
-#X obj 286 712 s bela_digitalOut13;
-#X obj 436 711 s bela_digitalOut14;
-#X obj 576 709 s bela_digitalOut15;
-#X obj 724 708 s bela_digitalOut16;
-#X obj 868 709 s bela_digitalOut17;
-#X obj 1015 710 s bela_digitalOut18;
-#X obj 1161 708 s bela_digitalOut19;
-#X obj 1309 709 s bela_digitalOut20;
-#X obj 1453 705 s bela_digitalOut21;
-#X obj 1601 706 s bela_digitalOut22;
-#X obj 1020 777 r bela_digitalOut20;
-#X obj 1179 778 r bela_digitalOut21;
-#X obj 1330 780 r bela_digitalOut22;
-#X obj 1104 319 r bela_digitalIn26;
-#X obj 956 319 r bela_digitalIn25;
-#X obj 810 317 r bela_digitalIn24;
-#X obj 662 320 r bela_digitalIn23;
+#X obj 170 533 unpack float float float float;
+#X obj 310 1095 r bela_digitalOut11;
+#X obj 459 1096 r bela_digitalOut12;
+#X obj 620 1099 r bela_digitalOut13;
+#X obj 771 1096 r bela_digitalOut14;
+#X obj 36 934 s bela_digitalOut11;
+#X obj 184 932 s bela_digitalOut12;
+#X obj 326 932 s bela_digitalOut13;
+#X obj 476 931 s bela_digitalOut14;
+#X obj 616 929 s bela_digitalOut15;
+#X obj 764 928 s bela_digitalOut16;
+#X obj 908 929 s bela_digitalOut17;
+#X obj 1055 930 s bela_digitalOut18;
+#X obj 1201 928 s bela_digitalOut19;
+#X obj 1349 929 s bela_digitalOut20;
+#X obj 1493 925 s bela_digitalOut21;
+#X obj 1641 926 s bela_digitalOut22;
+#X obj 1060 997 r bela_digitalOut20;
+#X obj 1219 998 r bela_digitalOut21;
+#X obj 1370 1000 r bela_digitalOut22;
+#X obj 1295 338 r bela_digitalIn26;
+#X obj 1082 337 r bela_digitalIn25;
+#X obj 896 333 r bela_digitalIn24;
+#X obj 698 334 r bela_digitalIn23;
 #X msg 66 128 out 11;
 #X msg 127 128 out 12;
 #X msg 190 127 out 13;
@@ -1015,7 +1015,27 @@ float float float float;
 #X msg 915 123 in 25;
 #X msg 852 124 in 24;
 #X msg 795 124 in 23;
-#X obj 870 777 r bela_digitalOut19;
+#X obj 910 997 r bela_digitalOut19;
+#X obj 805 422 delay 3;
+#X obj 698 390 t b f;
+#X msg 775 460 0;
+#X msg 805 459 1;
+#X obj 730 487 spigot 1;
+#X obj 1003 423 delay 3;
+#X obj 896 391 t b f;
+#X msg 973 461 0;
+#X msg 1003 460 1;
+#X obj 928 488 spigot 1;
+#X obj 1189 425 delay 3;
+#X obj 1082 393 t b f;
+#X msg 1159 463 0;
+#X msg 1189 462 1;
+#X obj 1114 490 spigot 1;
+#X obj 1402 430 delay 3;
+#X obj 1295 398 t b f;
+#X msg 1372 468 0;
+#X msg 1402 467 1;
+#X obj 1327 495 spigot 1;
 #X connect 0 0 77 0;
 #X connect 0 0 78 0;
 #X connect 0 0 79 0;
@@ -1094,10 +1114,10 @@ float float float float;
 #X connect 70 0 43 0;
 #X connect 71 0 44 0;
 #X connect 72 0 45 0;
-#X connect 73 0 18 0;
-#X connect 74 0 16 0;
-#X connect 75 0 14 0;
-#X connect 76 0 12 0;
+#X connect 73 0 102 0;
+#X connect 74 0 97 0;
+#X connect 75 0 92 0;
+#X connect 76 0 87 0;
 #X connect 77 0 9 0;
 #X connect 78 0 9 0;
 #X connect 79 0 9 0;
@@ -1107,6 +1127,34 @@ float float float float;
 #X connect 83 0 9 0;
 #X connect 84 0 9 0;
 #X connect 85 0 42 0;
+#X connect 86 0 89 0;
+#X connect 87 0 88 0;
+#X connect 87 0 86 0;
+#X connect 87 1 90 0;
+#X connect 88 0 90 1;
+#X connect 89 0 90 1;
+#X connect 90 0 12 0;
+#X connect 91 0 94 0;
+#X connect 92 0 93 0;
+#X connect 92 0 91 0;
+#X connect 92 1 95 0;
+#X connect 93 0 95 1;
+#X connect 94 0 95 1;
+#X connect 95 0 14 0;
+#X connect 96 0 99 0;
+#X connect 97 0 98 0;
+#X connect 97 0 96 0;
+#X connect 97 1 100 0;
+#X connect 98 0 100 1;
+#X connect 99 0 100 1;
+#X connect 100 0 16 0;
+#X connect 101 0 104 0;
+#X connect 102 0 103 0;
+#X connect 102 0 101 0;
+#X connect 102 1 105 0;
+#X connect 103 0 105 1;
+#X connect 104 0 105 1;
+#X connect 105 0 18 0;
 #X restore 63 72 pd pin_control;
 #X obj 411 82 metro 46.875;
 #X msg 4273 1679 3;

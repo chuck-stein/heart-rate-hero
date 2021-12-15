@@ -1,4 +1,4 @@
-#N canvas 489 237 1920 1002 12;
+#N canvas 489 237 1920 993 12;
 #X obj 909 156 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1285 183 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -58,7 +58,7 @@
 1;
 #X obj 630 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 673 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 673 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 500 353 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -168,7 +168,7 @@ presses increase the score.;
 #X obj 1943 293 r check_kick;
 #X obj 1943 456 spigot;
 #X obj 1943 377 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 1980 377 delay 800;
 #X obj 2040 323 r press_window;
 #X obj 2040 350 * 50;
@@ -176,12 +176,12 @@ presses increase the score.;
 -1 -1;
 #X obj 1943 402 expr ($f1 - 1) * -1;
 #X obj 1943 431 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+-0 1;
 #X obj 2020 431 loadbang;
 #X obj 1943 509 s score_decr;
 #X obj 2260 459 spigot;
 #X obj 2260 380 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 2297 380 delay 800;
 #X obj 2357 326 r press_window;
 #X obj 2357 353 * 50;
@@ -189,7 +189,7 @@ presses increase the score.;
 -1 -1;
 #X obj 2260 405 expr ($f1 - 1) * -1;
 #X obj 2260 434 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+-0 1;
 #X obj 2337 434 loadbang;
 #X obj 2260 512 s score_decr;
 #X obj 2285 283 r check_snare;
@@ -331,7 +331,7 @@ presses increase the score.;
 #X obj 1557 889 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1588 890 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 1557 936 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 1556 865 1;
@@ -404,12 +404,12 @@ tom responds to key s \, and hat responds to key d;
 0 1;
 #X obj 748 568 r led_window;
 #X msg -12 107 16;
-#N canvas 514 139 1920 1060 beatmaker 1;
+#N canvas 428 201 1920 1060 beatmaker 1;
 #X obj 47 165 f;
 #X obj 81 165 + 1;
 #X obj 47 189 mod 16;
 #X obj 47 213 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 12;
+-1 -1 9;
 #X floatatom 100 189 5 0 0 0 - - -;
 #X obj 59 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -422,10 +422,10 @@ tom responds to key s \, and hat responds to key d;
 #X obj 593 427 sel 2 8;
 #X obj 122 312 spigot;
 #X obj 120 262 sel 0;
-#X obj 125 285 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 125 285 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 438 209 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+-1 -1 0;
 #X msg 166 270 set 0;
 #X obj 447 315 spigot;
 #X obj 450 288 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -443,10 +443,10 @@ tom responds to key s \, and hat responds to key d;
 #X obj 47 84 inlet;
 #X obj 126 80 inlet;
 #X floatatom 142 123 5 0 0 0 - - -;
-#X obj 438 174 loadbang;
+#X obj 439 151 loadbang;
 #X obj 43 428 sel 0 10;
 #X obj 804 315 spigot;
-#X obj 807 288 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 807 288 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 848 273 set 0;
 #X obj 757 464 s k_trigger;
@@ -560,7 +560,6 @@ tom responds to key s \, and hat responds to key d;
 #X floatatom 248 1055 5 0 0 0 - - -;
 #X floatatom 248 1112 5 0 0 0 - - -;
 #X obj 249 847 r part;
-#X obj 249 974 sel 1;
 #X obj 350 846 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 249 1023 random 8;
@@ -573,6 +572,8 @@ tom responds to key s \, and hat responds to key d;
 of the beat;
 #X text 603 202 a collection of beats and a beat selector;
 #X text 436 881 change the beat after each bar;
+#X obj 249 974 sel 2;
+#X msg 435 179 0;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 0 1;
@@ -617,7 +618,7 @@ of the beat;
 #X connect 30 0 5 0;
 #X connect 31 0 7 1;
 #X connect 31 0 32 0;
-#X connect 33 0 16 0;
+#X connect 33 0 152 0;
 #X connect 34 0 22 0;
 #X connect 34 1 22 0;
 #X connect 35 0 45 0;
@@ -745,21 +746,21 @@ of the beat;
 #X connect 133 0 134 0;
 #X connect 133 0 135 0;
 #X connect 134 0 133 1;
-#X connect 135 0 141 0;
+#X connect 135 0 151 0;
 #X connect 136 0 134 0;
 #X connect 136 0 133 0;
-#X connect 137 0 143 0;
-#X connect 138 0 145 0;
-#X connect 139 0 147 0;
+#X connect 137 0 142 0;
+#X connect 138 0 144 0;
 #X connect 140 0 132 0;
-#X connect 141 0 136 0;
-#X connect 141 0 137 0;
-#X connect 142 0 132 0;
-#X connect 143 0 138 0;
-#X connect 144 0 145 1;
-#X connect 145 0 139 0;
-#X connect 146 0 142 0;
-#X connect 148 0 16 0;
+#X connect 141 0 132 0;
+#X connect 142 0 138 0;
+#X connect 143 0 144 1;
+#X connect 144 0 139 0;
+#X connect 145 0 141 0;
+#X connect 147 0 16 0;
+#X connect 151 0 136 0;
+#X connect 151 0 137 0;
+#X connect 152 0 16 0;
 #X restore -164 422 pd beatmaker;
 #X obj 589 72 r k_trigger;
 #X obj 592 555 r t_trigger;
@@ -799,7 +800,7 @@ of the beat;
 #X floatatom 1586 706 5 0 0 0 - - -;
 #X obj 2650 438 spigot;
 #X obj 2650 359 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 2687 359 delay 800;
 #X obj 2747 305 r press_window;
 #X obj 2747 332 * 50;
@@ -812,7 +813,7 @@ of the beat;
 #X obj 2650 491 s score_decr;
 #X obj 2967 441 spigot;
 #X obj 2967 362 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 3004 362 delay 800;
 #X obj 3064 308 r press_window;
 #X obj 3064 335 * 50;
@@ -890,7 +891,7 @@ float float float float, f 87;
 #X obj 589 609 spigot;
 #X obj 649 588 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 673 585 expr ($f1 - 1) * -1, f 10;
+#X obj 669 599 expr ($f1 - 1) * -1, f 10;
 #X obj 522 610 loadbang;
 #X obj 570 139 spigot;
 #X obj 630 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1

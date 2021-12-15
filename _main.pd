@@ -1,9 +1,9 @@
-#N canvas -11 -11 2560 1316 12;
+#N canvas 263 12 2560 1316 12;
 #X obj 781 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X floatatom 837 217 5 0 0 0 - - -;
 #X obj 1577 120 hradio 15 1 0 12 empty empty empty 0 -8 0 10 -262144
--1 -1 6;
+-1 -1 2;
 #X text 1577 101 C;
 #X text 1591 101 C#;
 #X text 1609 101 D;
@@ -788,7 +788,7 @@ either 1 or 2 sixteenth notes, f 30;
 -1 -1;
 #X obj 1063 128 s stop;
 #X msg 837 144 0;
-#N canvas -154 335 2560 1314 pin_control 0;
+#N canvas 197 142 2560 1314 pin_control 1;
 #X obj 557 64 loadbang;
 #X msg 310 126 out 15;
 #X msg 368 126 out 16;
@@ -901,6 +901,17 @@ float float float float;
 #X msg 1372 468 0;
 #X msg 1402 467 1;
 #X obj 1327 495 spigot 1;
+#X text 1121 153 set all digital pins but the last 4 as outputs. set
+the last 4 as inputs.;
+#X text 263 422 receive and output the values for analog output to
+control the last set of LEDs;
+#X text 1025 831 receive and output the values for digital output to
+control the first three sets of LEDs;
+#X text 1513 327 receive the state of the buttons;
+#X text 1533 445 debounce the buttons;
+#X text 1525 614 convert the bang from a button press into a number
+corresponding to the w \, e \, s \, & d keys. send those numbers to
+the rhythm patch \, where they will activate drums.;
 #X connect 0 0 77 0;
 #X connect 0 0 78 0;
 #X connect 0 0 79 0;
@@ -1031,240 +1042,249 @@ float float float float;
 #X msg 3930 1505 1;
 #X msg 3864 1949 0.5;
 #N canvas 597 167 1297 928 led_control 0;
-#X text 373 27 red: 1 0 0, f 5;
-#X obj 591 1738 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X text 122 172 red: 1 0 0, f 5;
+#X obj 340 1883 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 371 68 orange: 1 0.45 0, f 8;
-#X text 378 118 yellow: 1 0.5 0, f 8;
-#X text 379 174 green: 0 0.8 0, f 6;
-#X obj 498 257 +;
-#X obj 569 308 +;
-#X obj 587 256 f;
-#X obj 640 355 +;
-#X obj 658 310 f;
-#X obj 711 395 +;
-#X obj 729 356 f;
-#X obj 516 227 t f b b b b b b b b f, f 92;
-#X obj 782 439 +;
-#X obj 800 396 f;
-#X obj 854 486 +;
-#X obj 872 441 f;
-#X obj 925 529 +;
-#X obj 943 487 f;
-#X obj 997 571 +;
-#X obj 1014 530 f;
-#X obj 1067 614 +;
-#X obj 1085 571 f;
-#X obj 1612 -120 / 10;
-#X obj 515 66 inlet;
-#X obj 517 108 sel 1 -1;
-#X msg 499 151 1;
-#X msg 537 152 0;
-#X floatatom 519 196 5 0 0 0 - - -;
-#X obj 603 65 loadbang;
-#X obj 1310 -62 <= 0.25;
-#X obj 1553 -72 <= 0.5;
-#X obj 1738 -72 <= 0.75;
-#X obj 1503 -1 &&;
-#X obj 1535 -32 t b f;
-#X obj 1698 2 &&;
-#X obj 1730 -29 t b f;
-#X floatatom 1216 -91 5 0 0 0 - - -;
-#X obj 1356 40 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 1318 61 spigot;
-#X obj 1521 33 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 1483 54 spigot;
-#X obj 1721 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 1683 52 spigot;
-#X obj 1947 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 1909 70 spigot;
-#X obj 1898 -55 > 0.75;
-#X obj 1691 -74 > 0.5;
-#X obj 1499 -73 > 0.25;
-#X obj 1681 86 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1774 143 r 4_off;
-#X obj 1631 141 r 2_off;
-#X obj 1734 119 s 3_off;
-#X obj 647 120 t b b b b b b b b b b b;
-#X obj 1065 659 spigot;
-#X obj 1126 618 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X text 120 213 orange: 1 0.45 0, f 8;
+#X text 127 263 yellow: 1 0.5 0, f 8;
+#X text 128 319 green: 0 0.8 0, f 6;
+#X obj 247 402 +;
+#X obj 318 453 +;
+#X obj 336 401 f;
+#X obj 389 500 +;
+#X obj 407 455 f;
+#X obj 460 540 +;
+#X obj 478 501 f;
+#X obj 265 372 t f b b b b b b b b f, f 92;
+#X obj 531 584 +;
+#X obj 549 541 f;
+#X obj 603 631 +;
+#X obj 621 586 f;
+#X obj 674 674 +;
+#X obj 692 632 f;
+#X obj 746 716 +;
+#X obj 763 675 f;
+#X obj 816 759 +;
+#X obj 834 716 f;
+#X obj 1361 25 / 10;
+#X obj 264 211 inlet;
+#X obj 266 253 sel 1 -1;
+#X msg 248 296 1;
+#X msg 286 297 0;
+#X floatatom 268 341 5 0 0 0 - - -;
+#X obj 352 210 loadbang;
+#X obj 1059 83 <= 0.25;
+#X obj 1302 73 <= 0.5;
+#X obj 1487 73 <= 0.75;
+#X obj 1252 144 &&;
+#X obj 1284 113 t b f;
+#X obj 1447 147 &&;
+#X obj 1479 116 t b f;
+#X floatatom 965 54 5 0 0 0 - - -;
+#X obj 1105 185 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 1 1;
-#X obj 1176 765 delay 5;
-#X obj 1643 252 spigot;
-#X obj 1707 252 spigot;
-#X obj 1672 224 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X obj 1067 206 spigot;
+#X obj 1270 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
-#X obj 1737 224 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X obj 1232 199 spigot;
+#X obj 1470 176 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1432 197 spigot;
+#X obj 1696 194 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1658 215 spigot;
+#X obj 1647 90 > 0.75;
+#X obj 1440 71 > 0.5;
+#X obj 1248 72 > 0.25;
+#X obj 1430 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1523 288 r 4_off;
+#X obj 1380 286 r 2_off;
+#X obj 1483 264 s 3_off;
+#X obj 396 265 t b b b b b b b b b b b;
+#X obj 814 804 spigot;
+#X obj 875 763 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 925 910 delay 5;
+#X obj 1392 397 spigot;
+#X obj 1456 397 spigot;
+#X obj 1421 369 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 1 1;
-#X msg 1760 180 0;
-#X msg 1726 179 1;
-#X msg 1687 178 0;
-#X msg 1653 177 1;
-#X floatatom 1657 203 5 0 0 0 - - -;
-#X floatatom 1735 203 5 0 0 0 - - -;
-#X obj 1635 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1726 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1916 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1901 264 spigot;
-#X obj 1930 236 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X obj 1486 369 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
-#X msg 1945 190 0;
-#X msg 1911 189 1;
-#X floatatom 1915 215 5 0 0 0 - - -;
-#X obj 1956 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 1509 325 0;
+#X msg 1475 324 1;
+#X msg 1436 323 0;
+#X msg 1402 322 1;
+#X floatatom 1406 348 5 0 0 0 - - -;
+#X floatatom 1484 348 5 0 0 0 - - -;
+#X obj 1384 468 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1969 136 s 4_off;
-#X obj 1483 85 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1475 468 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1445 251 spigot;
-#X obj 1509 251 spigot;
-#X obj 1474 223 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X obj 1539 223 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X obj 1665 248 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1650 409 spigot;
+#X obj 1679 381 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 1 1;
-#X msg 1562 179 0;
-#X msg 1528 178 1;
-#X msg 1489 177 0;
-#X msg 1455 176 1;
-#X floatatom 1459 202 5 0 0 0 - - -;
-#X floatatom 1537 202 5 0 0 0 - - -;
-#X obj 1437 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 1694 335 0;
+#X msg 1660 334 1;
+#X floatatom 1664 360 5 0 0 0 - - -;
+#X obj 1705 482 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1528 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1718 281 s 4_off;
+#X obj 1232 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1307 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1281 148 r 2_off;
-#X obj 1293 259 spigot;
-#X obj 1322 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X msg 1337 185 0;
-#X msg 1303 184 1;
-#X floatatom 1307 210 5 0 0 0 - - -;
-#X obj 1285 330 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 1360 126 s 1_off;
-#X obj 1536 118 s 2_off;
-#X obj 1887 153 r 3_off;
-#X obj 1433 140 r 1_off;
-#X obj 1576 142 r 3_off;
-#X msg 1392 376 green +0.45;
-#X msg 1757 398 red +1;
-#X msg 1753 374 green -0.3;
-#X msg 1617 376 green +0.05;
-#X msg 1511 379 green -0.05;
-#X msg 2013 396 red -1;
-#X msg 2008 364 green +.3;
-#X msg 1291 373 green -0.45;
-#X obj 1406 475 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X floatatom 1423 453 5 0 0 0 - - -;
-#X msg 1411 426 1;
-#X msg 1451 427 0;
-#X msg 1400 550 1;
-#X obj 1401 578 +;
-#X msg 1457 541 0;
-#X obj 1457 566 f;
-#X floatatom 1399 602 5 0 0 0 - - -;
-#X obj 1419 637 sel 25;
-#X floatatom 1399 727 5 0 0 0 - - -;
-#X obj 1390 669 expr $f1 * 0.04 * 0.45, f 13;
-#X obj 1408 503 metro 25;
-#X obj 1278 475 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X floatatom 1295 453 5 0 0 0 - - -;
-#X msg 1283 426 1;
-#X msg 1323 427 0;
-#X msg 1272 550 1;
-#X obj 1273 578 +;
-#X msg 1329 541 0;
-#X obj 1329 566 f;
-#X floatatom 1271 602 5 0 0 0 - - -;
-#X obj 1291 637 sel 25;
-#X floatatom 1271 727 5 0 0 0 - - -;
-#X obj 1280 503 metro 25;
-#X obj 1273 663 expr 0.45 - ($f1 * 0.04 *.45), f 12;
-#X obj 1530 476 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X floatatom 1547 454 5 0 0 0 - - -;
-#X msg 1535 427 1;
-#X msg 1575 428 0;
-#X msg 1524 551 1;
-#X obj 1525 579 +;
-#X msg 1581 542 0;
-#X obj 1581 567 f;
-#X floatatom 1523 603 5 0 0 0 - - -;
-#X obj 1543 638 sel 25;
-#X floatatom 1523 728 5 0 0 0 - - -;
-#X obj 1532 504 metro 25;
-#X obj 1636 473 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X floatatom 1653 451 5 0 0 0 - - -;
-#X msg 1641 424 1;
-#X msg 1681 425 0;
-#X msg 1630 548 1;
-#X obj 1631 576 +;
-#X msg 1687 539 0;
-#X obj 1687 564 f;
-#X floatatom 1629 600 5 0 0 0 - - -;
-#X obj 1649 635 sel 25;
-#X floatatom 1629 725 5 0 0 0 - - -;
-#X obj 1638 501 metro 25;
-#X obj 1738 472 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X floatatom 1755 450 5 0 0 0 - - -;
-#X msg 1743 423 1;
-#X msg 1783 424 0;
-#X msg 1732 547 1;
-#X obj 1733 575 +;
-#X msg 1789 538 0;
-#X obj 1789 563 f;
-#X floatatom 1731 599 5 0 0 0 - - -;
-#X obj 1751 634 sel 25;
-#X floatatom 1731 724 5 0 0 0 - - -;
-#X obj 1740 500 metro 25;
-#X floatatom 1828 721 5 0 0 0 - - -;
-#X obj 1828 656 expr $f1 * 0.04, f 12;
-#X obj 1947 470 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X obj 1194 396 spigot;
+#X obj 1258 396 spigot;
+#X obj 1223 368 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 1 1;
-#X floatatom 1964 448 5 0 0 0 - - -;
-#X msg 1952 421 1;
-#X msg 1992 422 0;
-#X msg 1941 545 1;
-#X obj 1942 573 +;
-#X msg 1998 536 0;
-#X obj 1998 561 f;
-#X floatatom 1940 597 5 0 0 0 - - -;
-#X obj 1960 632 sel 25;
-#X floatatom 1940 722 5 0 0 0 - - -;
-#X obj 1949 498 metro 25;
-#X floatatom 2037 719 5 0 0 0 - - -;
-#X obj 2030 658 expr 1 - ($f1 * .04), f 9;
-#X obj 2195 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1288 368 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X msg 1311 324 0;
+#X msg 1277 323 1;
+#X msg 1238 322 0;
+#X msg 1204 321 1;
+#X floatatom 1208 347 5 0 0 0 - - -;
+#X floatatom 1286 347 5 0 0 0 - - -;
+#X obj 1186 467 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1907 128 t b b;
-#X obj 1298 122 t b b;
-#X obj 1456 113 t b b b b;
-#X obj 1658 118 t b b b b;
-#X obj 1512 940 dac~ 7 8 9;
-#X floatatom 1455 854 5 0 0 0 - - -;
-#X floatatom 1551 859 5 0 0 0 - - -;
-#X floatatom 1676 854 5 0 0 0 - - -;
-#X obj 1942 658 expr ($f1 * 0.04 * 0.3) + 0.5, f 9;
-#X obj 1733 660 expr 0.8 - ($f1 * 0.04 *.3), f 12;
-#X obj 1631 661 expr ($f1 * 0.04 * 0.05) + 0.45, f 12;
-#X obj 1525 664 expr 0.5 - ($f1 * 0.04 *.05), f 12;
-#X obj 1741 88 loadbang;
-#X msg 1213 817 0.8;
-#X obj 2009 182 loadbang;
+#X obj 1277 467 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1056 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1030 293 r 2_off;
+#X obj 1042 404 spigot;
+#X obj 1071 376 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X msg 1086 330 0;
+#X msg 1052 329 1;
+#X floatatom 1056 355 5 0 0 0 - - -;
+#X obj 1034 475 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1109 271 s 1_off;
+#X obj 1285 263 s 2_off;
+#X obj 1636 298 r 3_off;
+#X obj 1182 285 r 1_off;
+#X obj 1325 287 r 3_off;
+#X msg 1141 521 green +0.45;
+#X msg 1506 543 red +1;
+#X msg 1502 519 green -0.3;
+#X msg 1366 521 green +0.05;
+#X msg 1260 524 green -0.05;
+#X msg 1762 541 red -1;
+#X msg 1757 509 green +.3;
+#X msg 1040 518 green -0.45;
+#X obj 1155 620 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X floatatom 1172 598 5 0 0 0 - - -;
+#X msg 1160 571 1;
+#X msg 1200 572 0;
+#X msg 1149 695 1;
+#X obj 1150 723 +;
+#X msg 1206 686 0;
+#X obj 1206 711 f;
+#X floatatom 1148 747 5 0 0 0 - - -;
+#X obj 1168 782 sel 25;
+#X floatatom 1148 872 5 0 0 0 - - -;
+#X obj 1139 814 expr $f1 * 0.04 * 0.45, f 13;
+#X obj 1157 648 metro 25;
+#X obj 1027 620 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X floatatom 1044 598 5 0 0 0 - - -;
+#X msg 1032 571 1;
+#X msg 1072 572 0;
+#X msg 1021 695 1;
+#X obj 1022 723 +;
+#X msg 1078 686 0;
+#X obj 1078 711 f;
+#X floatatom 1020 747 5 0 0 0 - - -;
+#X obj 1040 782 sel 25;
+#X floatatom 1020 872 5 0 0 0 - - -;
+#X obj 1029 648 metro 25;
+#X obj 1022 808 expr 0.45 - ($f1 * 0.04 *.45), f 12;
+#X obj 1279 621 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X floatatom 1296 599 5 0 0 0 - - -;
+#X msg 1284 572 1;
+#X msg 1324 573 0;
+#X msg 1273 696 1;
+#X obj 1274 724 +;
+#X msg 1330 687 0;
+#X obj 1330 712 f;
+#X floatatom 1272 748 5 0 0 0 - - -;
+#X obj 1292 783 sel 25;
+#X floatatom 1272 873 5 0 0 0 - - -;
+#X obj 1281 649 metro 25;
+#X obj 1385 618 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X floatatom 1402 596 5 0 0 0 - - -;
+#X msg 1390 569 1;
+#X msg 1430 570 0;
+#X msg 1379 693 1;
+#X obj 1380 721 +;
+#X msg 1436 684 0;
+#X obj 1436 709 f;
+#X floatatom 1378 745 5 0 0 0 - - -;
+#X obj 1398 780 sel 25;
+#X floatatom 1378 870 5 0 0 0 - - -;
+#X obj 1387 646 metro 25;
+#X obj 1487 617 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X floatatom 1504 595 5 0 0 0 - - -;
+#X msg 1492 568 1;
+#X msg 1532 569 0;
+#X msg 1481 692 1;
+#X obj 1482 720 +;
+#X msg 1538 683 0;
+#X obj 1538 708 f;
+#X floatatom 1480 744 5 0 0 0 - - -;
+#X obj 1500 779 sel 25;
+#X floatatom 1480 869 5 0 0 0 - - -;
+#X obj 1489 645 metro 25;
+#X floatatom 1577 866 5 0 0 0 - - -;
+#X obj 1577 801 expr $f1 * 0.04, f 12;
+#X obj 1696 615 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X floatatom 1713 593 5 0 0 0 - - -;
+#X msg 1701 566 1;
+#X msg 1741 567 0;
+#X msg 1690 690 1;
+#X obj 1691 718 +;
+#X msg 1747 681 0;
+#X obj 1747 706 f;
+#X floatatom 1689 742 5 0 0 0 - - -;
+#X obj 1709 777 sel 25;
+#X floatatom 1689 867 5 0 0 0 - - -;
+#X obj 1698 643 metro 25;
+#X floatatom 1786 864 5 0 0 0 - - -;
+#X obj 1779 803 expr 1 - ($f1 * .04), f 9;
+#X obj 2257 239 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1656 273 t b b;
+#X obj 1047 267 t b b;
+#X obj 1205 258 t b b b b;
+#X obj 1407 263 t b b b b;
+#X obj 1261 1085 dac~ 7 8 9;
+#X floatatom 1204 999 5 0 0 0 - - -;
+#X floatatom 1300 1004 5 0 0 0 - - -;
+#X floatatom 1425 999 5 0 0 0 - - -;
+#X obj 1691 803 expr ($f1 * 0.04 * 0.3) + 0.5, f 9;
+#X obj 1482 805 expr 0.8 - ($f1 * 0.04 *.3), f 12;
+#X obj 1380 806 expr ($f1 * 0.04 * 0.05) + 0.45, f 12;
+#X obj 1274 809 expr 0.5 - ($f1 * 0.04 *.05), f 12;
+#X obj 1490 233 loadbang;
+#X msg 962 962 0.8;
+#X obj 1758 327 loadbang;
+#X text 248 797 first \, a moving average of 10 numbers is calculated
+;
+#X text 1768 73 second \, check in which quarter of 1 exists the average
+;
+#X text 1840 264 third \, determine if the LED should move toward or
+away from green. this is found by which LED was lit last.;
+#X text 1825 593 finally \, start a counter from 0 to 25 with a 25
+ms interval. then map this range to whatever are the necessary starting
+and ending values for the lights in the RGB LED.;
 #X connect 5 0 6 0;
 #X connect 6 0 8 0;
 #X connect 7 0 6 1;

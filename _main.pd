@@ -1,35 +1,35 @@
 #N canvas -11 -11 2560 1316 12;
-#X obj 781 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 896 33 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 837 217 5 0 0 0 - - -;
-#X obj 1577 120 hradio 15 1 0 12 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
-#X text 1577 101 C;
-#X text 1591 101 C#;
-#X text 1609 101 D;
-#X text 1621 101 D#;
-#X text 1639 101 E;
-#X text 1654 101 F;
-#X text 1666 101 F#;
-#X text 1684 101 G;
-#X text 1696 101 G#;
-#X text 1713 101 A;
-#X text 1726 101 A#;
-#X text 1745 101 B;
-#X floatatom 1577 357 5 0 0 0 - - -;
-#X obj 1577 324 expr 12 * $f2 + $f1;
-#X floatatom 1707 222 5 0 0 0 - - -;
-#X obj 1707 160 loadbang;
-#X obj 1707 253 + 2;
-#X text 1644 67 KEY ROOT;
+#X floatatom 952 217 5 0 0 0 - - -;
+#X obj 1692 120 hradio 15 1 0 12 empty empty empty 0 -8 0 10 -262144
+-1 -1 9;
+#X text 1692 101 C;
+#X text 1706 101 C#;
+#X text 1724 101 D;
+#X text 1736 101 D#;
+#X text 1754 101 E;
+#X text 1769 101 F;
+#X text 1781 101 F#;
+#X text 1799 101 G;
+#X text 1811 101 G#;
+#X text 1828 101 A;
+#X text 1841 101 A#;
+#X text 1860 101 B;
+#X floatatom 1692 357 5 0 0 0 - - -;
+#X obj 1692 324 expr 12 * $f2 + $f1;
+#X floatatom 1822 222 5 0 0 0 - - -;
+#X obj 1822 160 loadbang;
+#X obj 1822 253 + 2;
+#X text 1759 67 KEY ROOT;
 #X obj 334 861 f;
 #X obj 387 861 f;
 #X obj 439 861 f;
 #X obj 490 861 f;
 #X obj 541 861 f;
-#X text 1431 356 root MIDI number >;
-#X obj 1577 395 s root_midi_number;
-#X obj 1680 295 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X text 1546 356 root MIDI number >;
+#X obj 1692 395 s root_midi_number;
+#X obj 1795 295 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 405 790 + 3;
 #X obj 457 790 + 5;
@@ -59,7 +59,7 @@
 -1 -1;
 #X obj 813 752 random 3;
 #X obj 813 782 sel 0 1 2;
-#X msg 1707 192 4;
+#X msg 1822 192 4;
 #X obj 948 781 - 36;
 #X obj 1008 781 - 29;
 #X obj 1060 781 - 24;
@@ -74,7 +74,7 @@
 #X obj 132 757 random 2;
 #X text 472 639 LEAD;
 #X text 916 645 BASS;
-#X text 1751 223 < OCTAVE;
+#X text 1866 223 < OCTAVE;
 #X obj 3684 2004 *~ 0.5, f 9;
 #N canvas 0 65 1512 917 swarmatron 0;
 #X obj 300 582 phasor~;
@@ -639,25 +639,25 @@ f 25;
 #X obj 2756 1466 loadbang;
 #X text 2902 1518 arp volume;
 #X text 2606 675 ARP;
-#X obj 586 365 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 545 441 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 738 364 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 697 440 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 889 364 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 848 440 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1039 364 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 998 440 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 586 399 s half_note;
-#X obj 586 327 measure_divider 2;
-#X obj 738 326 measure_divider 4;
-#X obj 889 326 measure_divider 8;
-#X obj 1039 326 measure_divider 16;
-#X obj 738 402 s quarter_note;
-#X obj 889 402 s eighth_note;
-#X obj 1039 401 s sixteenth_note;
-#X msg 781 127 1;
-#X obj 781 181 +;
-#X obj 837 171 % 64;
+#X obj 545 475 s half_note;
+#X obj 545 403 measure_divider 2;
+#X obj 697 402 measure_divider 4;
+#X obj 848 402 measure_divider 8;
+#X obj 998 402 measure_divider 16;
+#X obj 697 478 s quarter_note;
+#X obj 848 478 s eighth_note;
+#X obj 998 477 s sixteenth_note;
+#X msg 896 127 1;
+#X obj 896 181 +;
+#X obj 952 171 % 64;
 #X obj 100 585 r sixteenth_note;
 #X text 51 525 this mechanism causes each lead note to randomly last
 either 1 or 2 sixteenth notes, f 30;
@@ -667,25 +667,25 @@ either 1 or 2 sixteenth notes, f 30;
 #X obj 813 693 r sixteenth_note;
 #X obj 1415 716 r quarter_note;
 #X obj 1815 1112 r quarter_note;
-#X text 590 48 TEMPO SEQUENCING;
+#X text 606 27 TEMPO SEQUENCING;
 #X msg 1836 1505 0.08;
 #X obj 1790 1560 *~ 0.08;
-#X obj 1198 365 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1157 441 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1198 327 measure_divider 32;
-#X obj 1198 402 s thirty_second_note;
+#X obj 1157 403 measure_divider 32;
+#X obj 1157 478 s thirty_second_note;
 #X obj 2555 744 r thirty_second_note;
 #X obj 2667 1556 *~ 0.1;
-#X obj 1069 261 s sixty_fourth_note_index;
+#X obj 1159 352 s sixty_fourth_note_index;
 #X obj 2668 1236 *~;
 #X obj 2686 1137 r sixty_fourth_note_index;
-#X obj 451 364 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 410 440 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 451 398 s whole_note;
-#X obj 451 328 sel 0;
+#X obj 410 474 s whole_note;
+#X obj 410 404 sel 0;
 #X obj 2460 706 r whole_note;
 #X floatatom 1365 814 5 0 0 0 - - -;
-#X obj 781 9 loadbang;
+#X obj 896 9 loadbang;
 #X obj 2686 1180 expr if ($f1 < 16 || $f1 >= 32 && $f1 < 48 \, 1 \,
 0);
 #X obj 1010 1312 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
@@ -697,94 +697,94 @@ either 1 or 2 sixteenth notes, f 30;
 #X obj 2727 1224 r thirty_second_note;
 #X obj 2667 1324 *~;
 #X msg 2727 1261 1 5 \, 0 100 5;
-#X obj 840 50 r sixty_fourth_note_duration;
-#X obj 781 61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 956 42 r sixty_fourth_note_duration;
+#X obj 896 53 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 3077 1043 r kick_play;
 #X obj 3458 1047 r snare_play;
-#X obj 1920 93 r score_incr;
-#X obj 2030 93 r score_decr;
-#X floatatom 1920 230 5 0 0 0 - - -;
-#X msg 1920 123 1;
-#X obj 1920 188 +;
-#X msg 2030 123 -1;
-#X obj 1954 189 f;
-#X msg 1989 189 0;
+#X obj 2035 93 r score_incr;
+#X obj 2145 93 r score_decr;
+#X floatatom 2035 230 5 0 0 0 - - -;
+#X msg 2035 123 1;
+#X obj 2035 188 +;
+#X msg 2145 123 -1;
+#X obj 2069 189 f;
+#X msg 2104 189 0;
 #X obj 3898 1044 r hat_play;
 #X obj 4279 1048 r tom_play;
-#X obj 2181 109 r k_led1;
-#X obj 2181 131 r k_led2;
-#X obj 2181 153 r k_led3;
-#X obj 2181 175 r k_led4;
-#X obj 2254 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2296 109 r k_led1;
+#X obj 2296 131 r k_led2;
+#X obj 2296 153 r k_led3;
+#X obj 2296 175 r k_led4;
+#X obj 2369 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2254 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2369 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2254 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2369 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2254 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2369 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2351 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2466 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2351 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2466 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2351 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2466 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2351 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2466 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2278 109 r s_led1;
-#X obj 2278 131 r s_led2;
-#X obj 2278 153 r s_led3;
-#X obj 2278 175 r s_led4;
-#X obj 1183 166 delay 100;
-#X obj 2448 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2393 109 r s_led1;
+#X obj 2393 131 r s_led2;
+#X obj 2393 153 r s_led3;
+#X obj 2393 175 r s_led4;
+#X obj 1185 275 delay 100;
+#X obj 2563 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2448 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2563 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2448 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2563 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2448 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2563 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2545 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2660 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2545 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2660 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2545 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2660 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2545 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2660 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2373 109 r t_led1;
-#X obj 2375 131 r t_led2;
-#X obj 2375 153 r t_led3;
-#X obj 2375 175 r t_led4;
-#X obj 2472 109 r h_led1;
-#X obj 2472 131 r h_led2;
-#X obj 2472 153 r h_led3;
-#X obj 2472 175 r h_led4;
-#X obj 2153 197 r check_kick;
-#X obj 2254 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2488 109 r t_led1;
+#X obj 2490 131 r t_led2;
+#X obj 2490 153 r t_led3;
+#X obj 2490 175 r t_led4;
+#X obj 2587 109 r h_led1;
+#X obj 2587 131 r h_led2;
+#X obj 2587 153 r h_led3;
+#X obj 2587 175 r h_led4;
+#X obj 2268 197 r check_kick;
+#X obj 2369 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2352 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2467 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2251 244 r check_snare;
-#X obj 2448 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2366 244 r check_snare;
+#X obj 2563 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2546 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2661 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 2347 197 r check_tom;
-#X obj 2445 244 r check_hat;
-#X symbolatom 2326 343 10 0 0 0 - - -;
-#X msg 2254 221 symbol KICK!;
-#X msg 2352 268 symbol SNARE!;
-#X msg 2448 221 symbol TOM!;
-#X msg 2546 268 symbol HAT!;
-#X obj 1127 166 switch;
-#X obj 1063 76 sel 0;
-#X obj 1063 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 2462 197 r check_tom;
+#X obj 2560 244 r check_hat;
+#X symbolatom 2441 343 10 0 0 0 - - -;
+#X msg 2369 221 symbol KICK!;
+#X msg 2467 268 symbol SNARE!;
+#X msg 2563 221 symbol TOM!;
+#X msg 2661 268 symbol HAT!;
+#X obj 1185 246 switch;
+#X obj 1185 88 sel 0;
+#X obj 1185 113 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1063 128 s stop;
-#X msg 837 144 0;
-#N canvas 197 142 2560 1314 pin_control 0;
+#X obj 1135 157 s stop;
+#X msg 952 144 0;
+#N canvas -283 339 2560 1314 pin_control 0;
 #X obj 557 64 loadbang;
 #X msg 310 126 out 15;
 #X msg 368 126 out 16;
@@ -1027,7 +1027,7 @@ the rhythm patch \, where they will activate drums.;
 #X connect 103 0 105 1;
 #X connect 104 0 105 1;
 #X connect 105 0 18 0;
-#X restore 59 62 pd pin_control;
+#X restore 103 40 pd pin_control;
 #X msg 4273 1679 3;
 #X obj 4157 1734 *~ 3;
 #X msg 3511 1514 0.5;
@@ -1539,9 +1539,9 @@ and ending values for the lights in the RGB LED.;
 #X connect 202 0 52 0;
 #X connect 203 0 196 0;
 #X connect 204 0 72 0;
-#X restore 2030 154 pd led_control;
-#X obj 1128 198 s go;
-#X obj 1069 166 sel 55;
+#X restore 2145 154 pd led_control;
+#X obj 1185 306 s go;
+#X obj 1085 201 sel 55;
 #N canvas 602 238 693 610 key_changer 0;
 #X obj 985 1275 outlet;
 #X obj 1010 49 inlet;
@@ -1648,15 +1648,15 @@ to the current one \, and in bounds, f 18;
 #X connect 40 0 38 0;
 #X connect 41 0 36 0;
 #X connect 41 0 40 0;
-#X restore 1452 25 pd key_changer;
-#X obj 781 102 metro 100;
-#X obj 1546 57 loadbang;
-#X obj 382 76 r heartrate;
-#X obj 382 236 s sixty_fourth_note_duration;
-#X obj 382 199 expr 60000 / ($f1 * 16);
-#X obj 469 130 print BPM;
-#X text 261 56 heartrate comes from C++ pulse detection, f 16;
-#X obj 382 160 clip 30 150;
+#X restore 1567 25 pd key_changer;
+#X obj 896 102 metro 100;
+#X obj 1661 57 loadbang;
+#X obj 497 76 r heartrate;
+#X obj 497 236 s sixty_fourth_note_duration;
+#X obj 497 199 expr 60000 / ($f1 * 16);
+#X obj 584 130 print BPM;
+#X text 376 56 heartrate comes from C++ pulse detection, f 16;
+#X obj 497 160 clip 30 150;
 #N canvas -11 -11 2560 1316 arpeggiator 0;
 #X floatatom 803 393 5 0 0 0 - - -;
 #X obj 811 340 float;
@@ -1675,7 +1675,7 @@ to the current one \, and in bounds, f 18;
 -1 -1;
 #X obj 786 470 random 5;
 #X obj 774 520 sel 0 1 2 3 4;
-#X msg 710 614 0 1 2 4 0 2 0 4;
+#X msg 710 614 2 1 0 0 4 1 1 3;
 #X msg 557 271 set;
 #X floatatom 797 754 5 0 0 0 - - -;
 #X floatatom 603 754 5 0 0 0 - - -;
@@ -1723,7 +1723,7 @@ to the current one \, and in bounds, f 18;
 #X obj 774 840 spigot;
 #X obj 761 790 sel 2;
 #X obj 837 784 sel 3;
-#X obj 587 814 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 587 814 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 665 813 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -1735,7 +1735,7 @@ to the current one \, and in bounds, f 18;
 #X obj 925 843 spigot;
 #X obj 1014 843 spigot;
 #X obj 1090 845 spigot;
-#X obj 903 819 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 903 819 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 981 818 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -1884,10 +1884,10 @@ outlet;
 #X text 2241 740 get new sequence of 8 notes >;
 #X text 2710 744 < play next note in sequence;
 #X text 2880 1131 only let notes through on beats 1 & 3, f 23;
-#X msg 310 160 80;
-#X text 149 149 override heart rate & set tempo to 80 BPM >, f 21
+#X msg 425 160 80;
+#X text 264 149 override heart rate & set tempo to 80 BPM >, f 21
 ;
-#X obj 310 133 loadbang;
+#X obj 425 133 loadbang;
 #N canvas -11 -11 2560 1316 vu_measure 0;
 #X obj 62 237 env~ 1024;
 #X obj 164 219 abs~;
@@ -1961,7 +1961,7 @@ need to convert the output to dB with rmstodb and also subtract by
 #X obj 1314 559 s score_incr;
 #X obj 1071 375 r key_press;
 #X obj 855 233 metro 200;
-#X obj 855 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 855 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 890 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1972,7 +1972,7 @@ need to convert the output to dB with rmstodb and also subtract by
 #X obj 1285 236 r press_window;
 #X obj 1053 181 r led_window;
 #X obj 942 209 hsl 64 15 100 600 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1260 1;
+-1 -1 0 1;
 #X obj 892 289 % 5;
 #X obj 807 348 sel 2;
 #X obj 807 379 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -1986,9 +1986,9 @@ need to convert the output to dB with rmstodb and also subtract by
 -1 -1;
 #X obj 936 379 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 807 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 807 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 850 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 850 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 893 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -2013,7 +2013,7 @@ need to convert the output to dB with rmstodb and also subtract by
 #X obj 1421 348 sel 1;
 #X floatatom 1583 289 5 0 0 0 - - -;
 #X obj 1677 189 hsl 64 15 100 600 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 1260 1;
+-262144 -1 -1 0 1;
 #X obj 1550 289 % 5;
 #X obj 1465 348 sel 2;
 #X obj 1465 379 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -2032,13 +2032,13 @@ need to convert the output to dB with rmstodb and also subtract by
 #X obj 1508 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 1551 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 1594 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 1421 378 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1421 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 1614 410 delay 200;
 #X obj 1465 434 s s_led1;
 #X obj 1508 459 s s_led2;
@@ -2058,7 +2058,7 @@ presses increase the score.;
 #X obj 1157 459 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1188 460 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 1157 506 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 1156 435 1;
@@ -2090,7 +2090,7 @@ presses increase the score.;
 #X obj 1820 459 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1851 460 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 1820 506 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 1819 435 1;
@@ -2138,7 +2138,7 @@ presses increase the score.;
 #X obj 763 819 sel 1;
 #X floatatom 925 760 5 0 0 0 - - -;
 #X obj 942 680 hsl 64 15 100 600 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1260 1;
+-1 -1 0 1;
 #X obj 892 760 % 5;
 #X obj 807 819 sel 2;
 #X obj 807 850 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -2168,7 +2168,7 @@ presses increase the score.;
 #X obj 1177 631 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1235 631 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X msg 1235 686 1;
 #X obj 1235 742 +;
 #X obj 1290 742 % 16;
@@ -2179,7 +2179,7 @@ presses increase the score.;
 #X obj 1235 656 metro 50;
 #X obj 1235 825 spigot;
 #X obj 1177 772 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 1293 712 hsl 64 15 4 16 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 1050 1;
 #X floatatom 1235 858 5 0 0 0 - - -;
@@ -2192,7 +2192,7 @@ presses increase the score.;
 #X obj 1162 909 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1193 910 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 1162 956 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 1161 885 1;
@@ -2210,7 +2210,7 @@ presses increase the score.;
 #X obj 1421 803 sel 1;
 #X floatatom 1583 744 5 0 0 0 - - -;
 #X obj 1600 664 hsl 64 15 100 600 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 1260 1;
+-262144 -1 -1 0 1;
 #X obj 1550 744 % 5;
 #X obj 1465 803 sel 2;
 #X obj 1465 834 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -2334,7 +2334,7 @@ tom responds to key s \, and hat responds to key d;
 #X obj 254 162 hsl 64 15 4 16 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 6300 1;
 #X obj 251 108 loadbang;
-#X obj 105 398 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 105 398 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 1011 593 r led_window;
 #X msg 251 132 16;
@@ -2343,9 +2343,9 @@ tom responds to key s \, and hat responds to key d;
 #X obj 81 165 + 1;
 #X obj 47 189 mod 16;
 #X obj 47 213 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 9;
+-1 -1 10;
 #X floatatom 100 189 5 0 0 0 - - -;
-#X obj 59 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 59 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 132 428 sel 4 12;
 #X obj 47 141 metro 200;
@@ -2734,7 +2734,7 @@ of the beat;
 #X floatatom 1849 731 5 0 0 0 - - -;
 #X obj 2913 463 spigot;
 #X obj 2913 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 2950 384 delay 800;
 #X obj 3010 330 r press_window;
 #X obj 3010 357 * 50;
@@ -2742,7 +2742,7 @@ of the beat;
 -1 -1;
 #X obj 2913 409 expr ($f1 - 1) * -1;
 #X obj 2913 438 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+-0 1;
 #X obj 2990 438 loadbang;
 #X obj 2913 516 s score_decr;
 #X obj 3230 466 spigot;
@@ -2819,11 +2819,11 @@ float float float float, f 87;
 #X msg 198 331 1;
 #X obj 1512 634 spigot;
 #X obj 1572 613 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
--0 1;
+1 1;
 #X obj 1596 610 expr ($f1 - 1) * -1, f 10;
 #X obj 1445 635 loadbang;
 #X obj 852 634 spigot;
-#X obj 912 613 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 -0
+#X obj 912 613 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 932 624 expr ($f1 - 1) * -1, f 10;
 #X obj 785 635 loadbang;
@@ -3354,7 +3354,13 @@ controlling subpatch of _main.;
 #X connect 429 0 428 0;
 #X connect 430 0 428 0;
 #X connect 431 0 287 0;
-#X restore 60 105 pd rhythm;
+#X restore 103 75 pd rhythm;
+#X text 19 52 important subpatches, f 10;
+#X obj 1245 243 r sixty_fourth_note_duration;
+#X text 789 36 start/stop music & game >, f 14;
+#X text 1209 148 this mechanism prevents a drum pattern from playing
+for the first measure of the game \, because the first durm hit needs
+time for the LED cues to run their course, f 41;
 #X connect 0 0 229 0;
 #X connect 1 0 210 0;
 #X connect 1 0 215 0;
@@ -3570,7 +3576,6 @@ controlling subpatch of _main.;
 #X connect 225 0 227 0;
 #X connect 226 0 209 0;
 #X connect 227 0 224 0;
-#X connect 228 0 258 1;
 #X connect 228 0 307 0;
 #X connect 228 0 307 1;
 #X connect 229 0 289 0;
@@ -3646,3 +3651,4 @@ controlling subpatch of _main.;
 #X connect 319 0 311 0;
 #X connect 321 0 319 0;
 #X connect 322 0 134 0;
+#X connect 325 0 258 1;
